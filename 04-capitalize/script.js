@@ -7,7 +7,13 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+    let array = str.split(" ");
+    let result = [];
+    array.forEach(function(text) {
+       let firstSign = text.slice(0,1);
+       result.push(firstSign.toUpperCase() + text.slice(1));
+    });
+    return result.join(" ");
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

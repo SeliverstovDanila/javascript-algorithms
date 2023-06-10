@@ -8,9 +8,16 @@
  * 
 */
 
-function anagram(str1, str2) {
-    // Напишите код здесь
-}
+  function anagram(str1, str2) {
+      return str2.toLowerCase().split('').sort().join() === str1.toLowerCase().split('').sort().join();
+      //Решение сломанное для значения "up", "UP":c
+      
+      // При добавление .toString после join ломает решение, выдает верное значение для "finder", "Friend"
+      // А для остальных - неверное
+  }
+
+//  const anagram = (str1,str2) => [...str1.toLowerCase().split(' ')].sort().toString() === [...str2.toLowerCase().split(' ')].sort().toString();
+// Решение сломанное для значения "finder", "Friend" :C
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

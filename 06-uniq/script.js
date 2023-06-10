@@ -8,7 +8,12 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    let result = [];
+    arr.forEach(function (meaning) {
+        if (!result.includes(meaning))
+        result.push(meaning);
+    });
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
