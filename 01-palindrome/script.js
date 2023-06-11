@@ -17,7 +17,8 @@ function palindrome(str) {
     str = str.toLowerCase().replace(/\s|[!,]/g,'');
     return str === str.split('').reverse().join('');
 }
-// Протестируйте решение, вызывая функцию с разными аргументами:
+
+// [!,] массив с знаками припинания, использующихся в тексте ('О, лета тело!');
 
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true

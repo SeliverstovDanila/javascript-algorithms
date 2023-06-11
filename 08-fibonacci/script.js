@@ -9,9 +9,13 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    if (n === 0) return 0;
+    const fibonacciArray = [0,1];
+    for (let i = 2; i <= n; i++) {
+        const result = fibonacciArray[i - 2] + fibonacciArray[i - 1];
+        fibonacciArray.push(result);
+    }
+    return fibonacciArray[n - 1];
 }
-
-// Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(fibonacci(4)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)
